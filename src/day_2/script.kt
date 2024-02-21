@@ -13,7 +13,7 @@ class DayTwo(inputPath: String) : Day(inputPath) {
         }
     }
 
-    override fun part1(): Int = readFile
+    override fun part1(): Int = readFileList
         .map { line ->
             val splitLine = line.split(":").map { it.trim() }
             val gameId = splitLine[0].split(" ")[1].toInt()
@@ -29,7 +29,7 @@ class DayTwo(inputPath: String) : Day(inputPath) {
         .sumOf { it.first }
 
 
-    override fun part2(): Int = readFile
+    override fun part2(): Int = readFileList
         .map { line ->
             val splitLine = line.split(":").map { it.trim() }
             val gameId = splitLine[0].split(" ")[1].toInt()

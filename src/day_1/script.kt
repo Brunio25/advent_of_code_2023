@@ -15,11 +15,11 @@ class DayOne(inputPath: String) : Day(inputPath) {
         "nine"  to 9
     )
 
-    override fun part1(): Int = readFile
+    override fun part1(): Int = readFileList
         .map { line -> line.filter { it.isDigit() } }
         .sumOf { line -> (line.first() + "" + line.last()).toInt() }
 
-    override fun part2(): Int = readFile
+    override fun part2(): Int = readFileList
         .map { line ->
             buildString {
                 line.forEachIndexed { index, character ->
